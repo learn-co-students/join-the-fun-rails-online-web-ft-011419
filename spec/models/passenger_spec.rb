@@ -1,11 +1,11 @@
 require 'spec_helper'
-
+require 'pry'
 describe Passenger do
   let(:passenger) { subject }
 
   it 'has many taxis through rides' do
     taxi = Taxi.create
-
+    binding.pry
     passenger.taxis << taxi
     passenger.save
 
